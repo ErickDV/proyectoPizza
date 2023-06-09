@@ -1,0 +1,17 @@
+6
+Queretaro
+San Luis Potosi
+Celaya
+CdMx
+Cd Valles
+Leon
+Queretaro*San Luis Potosi*90
+Queretaro*Celaya*30
+Queretaro*CdMx*180
+San Luis Potosi*Queretaro*90
+San Luis Potosi*Cd Valles*70
+Celaya*Queretaro*30
+Celaya*Leon*80
+CdMx*Queretaro*180
+Cd Valles*San Luis Potosi*70
+Leon*Celaya*80
