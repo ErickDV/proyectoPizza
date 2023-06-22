@@ -17,15 +17,16 @@ int main()
     int mat[n][n];
     */
 
-    string graf = "pizza.txt";
+    string graf = "prueba.txt";
     Grafo g(graf);
     g.mostrarGrafo();
     cout<<"=============== SEPARADOR ===================="<<endl;
     g.crearListaV();
-    g.mostrarListasVertices();
     g.crearMatrizAdj();
     g.mostrarGrafo();
-    g.dijkstra("a","b");
+
+    g.dijkstra("A","D");
+    g.mostrarGrafo();
 
     return 0;
 }

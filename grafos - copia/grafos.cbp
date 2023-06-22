@@ -39,6 +39,7 @@
 		<Unit filename="include/Vertice.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="pizza.txt" />
+		<Unit filename="prueba.txt" />
 		<Unit filename="src/Grafo.cpp" />
 		<Unit filename="src/Vertice.cpp" />
 		<Extensions>

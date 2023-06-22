@@ -5,7 +5,10 @@
 
 class Grafo
 {
+    int limite = 10000;
     Vertice *listaV;
+    int *suma;
+    int *verticeAnterior;
     int **matAdj;
     int numVertices;
     //string nomArchGraf;

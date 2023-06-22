@@ -68,3 +68,72 @@
 1686271253 source:c:\users\rodry\downloads\grafos - copia\src\vertice.cpp
 	"Vertice.h"
 
+1686756863 source:c:\users\erick\documents\universidad\cuarto semestre\2 estructura datos\proyectopizza\grafos - copia\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	"Grafo.h"
+
+1686271779 c:\users\erick\documents\universidad\cuarto semestre\2 estructura datos\proyectopizza\grafos - copia\include\grafo.h
+	"Vertice.h"
+	<fstream>
+
+1686271779 c:\users\erick\documents\universidad\cuarto semestre\2 estructura datos\proyectopizza\grafos - copia\include\vertice.h
+	<string>
+
+1686271892 source:c:\users\erick\documents\universidad\cuarto semestre\2 estructura datos\proyectopizza\grafos - copia\src\grafo.cpp
+	"Grafo.h"
+	<fstream>
+	<string>
+	<iostream>
+	"Vertice.h"
+
+1686271253 source:c:\users\erick\documents\universidad\cuarto semestre\2 estructura datos\proyectopizza\grafos - copia\src\vertice.cpp
+	"Vertice.h"
+
+1687373373 source:c:\users\zahid\desktop\proyectopizza\grafos - copia\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	"Grafo.h"
+
+1687185145 c:\users\zahid\desktop\proyectopizza\grafos - copia\include\grafo.h
+	"Vertice.h"
+	<fstream>
+
+1686271780 c:\users\zahid\desktop\proyectopizza\grafos - copia\include\vertice.h
+	<string>
+
+1686271254 source:c:\users\zahid\desktop\proyectopizza\grafos - copia\src\vertice.cpp
+	"Vertice.h"
+
+1687189391 source:c:\users\zahid\desktop\proyectopizza\grafos - copia\src\grafo.cpp
+	"Grafo.h"
+	<fstream>
+	<string>
+	<iostream>
+	"Vertice.h"
+
+1687467269 source:c:\users\erick\documents\universidad\cuarto semestre\2 estructura datos\proyectopizza\proyectopizza\grafos - copia\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	"Grafo.h"
+
+1687374599 c:\users\erick\documents\universidad\cuarto semestre\2 estructura datos\proyectopizza\proyectopizza\grafos - copia\include\grafo.h
+	"Vertice.h"
+	<fstream>
+
+1687374599 c:\users\erick\documents\universidad\cuarto semestre\2 estructura datos\proyectopizza\proyectopizza\grafos - copia\include\vertice.h
+	<string>
+
+1687466212 source:c:\users\erick\documents\universidad\cuarto semestre\2 estructura datos\proyectopizza\proyectopizza\grafos - copia\src\grafo.cpp
+	"Grafo.h"
+	<fstream>
+	<string>
+	<iostream>
+	"Vertice.h"
+
+1687374599 source:c:\users\erick\documents\universidad\cuarto semestre\2 estructura datos\proyectopizza\proyectopizza\grafos - copia\src\vertice.cpp
+	"Vertice.h"
+
