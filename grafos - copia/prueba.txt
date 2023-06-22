@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 8
 A
 B
@@ -29,3 +30,7 @@ G*B*5
 G*E*2
 H*F*3
 H*E*1
+=======
+
+hola como estas
+>>>>>>> f2f53e84b0afedfe9b471fffeb3e8809b5a65eb0
