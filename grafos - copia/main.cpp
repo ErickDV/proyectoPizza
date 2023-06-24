@@ -19,14 +19,20 @@ int main()
 
     string graf = "prueba.txt";
     Grafo g(graf);
+    g.inicializarSuma();
     g.mostrarGrafo();
     cout<<"=============== SEPARADOR ===================="<<endl;
     g.crearListaV();
     g.crearMatrizAdj();
-    g.mostrarGrafo();
 
-    g.dijkstra("A","D");
-    g.mostrarGrafo();
+    cout << "Entregas por realizar: "<<endl;
+    int entregas;
+    cin >> entregas;
+    g.combinaciones(entregas);
+
+
+    //Utilizar colores para imprimir
+
 
     return 0;
 }

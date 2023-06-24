@@ -7,8 +7,7 @@ class Grafo
 {
     int limite = 10000;
     Vertice *listaV;
-    int *suma;
-    int *verticeAnterior;
+
     int **matAdj;
     int numVertices;
     //string nomArchGraf;
@@ -16,12 +15,19 @@ class Grafo
     int buscarV(string s);
 
     public:
+
+        string obtenerRuta(string n);
+        int *suma;
+        int *verticeAnterior;
         Grafo(string nomArchG);
         void mostrarGrafo();
         void crearListaV();
         void mostrarListasVertices();
         void crearMatrizAdj();
         void dijkstra(string a,string b);
+        void combinaciones(int n);
+        void inicializarSuma();
+        void imprimirSuma();
 };
 
 #endif // GRAFO_H
