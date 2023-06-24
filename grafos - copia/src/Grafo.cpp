@@ -101,6 +101,7 @@ string Grafo::obtenerRuta(string n){
 
 void Grafo::combinaciones(int n){
 
+    string dir[4];
     string dir1 = "";
     string dir2 = "";
     string dir3 = "";
@@ -108,17 +109,21 @@ void Grafo::combinaciones(int n){
 
     string pizzeria="A";
 
+    int posDir[4];
     int posDir1;
     int posDir2;
     int posDir3;
     int posDir4;
 
 
+    string comb[4];
     string comb1;
     string comb2;
     string comb3;
     string comb4;
+    int primeraComb;
 
+    int tiempo[4];
     int tiempo1=0;
     int tiempo2=0;
     int tiempo3=0;
@@ -127,7 +132,8 @@ void Grafo::combinaciones(int n){
     int tiempoMenor = limite;
     string rutaMenor="";
 
-    string ruta="";
+    string ruta[4];
+
     string ruta1="";
     string ruta2="";
     string ruta3="";
@@ -175,7 +181,7 @@ void Grafo::combinaciones(int n){
 
             resAnterior=posDir1;
             do{
-                ruta += listaV[resAnterior].getNom() + " -> ";
+                ruta1 += listaV[resAnterior].getNom() + " -> ";
                 resAnterior=verticeAnterior[resAnterior];
             }while(resAnterior!=-1);
 
@@ -189,7 +195,7 @@ void Grafo::combinaciones(int n){
                 resAnterior=verticeAnterior[resAnterior];
             }while(resAnterior!=posDir1);
 
-            ruta2+=ruta;
+            ruta2+=ruta1;
 
 
             tiempo1+=suma[posDir2];
@@ -211,16 +217,49 @@ void Grafo::combinaciones(int n){
 
         break;
 
-    case 3: //sumar 2 al tiempo
+    case 3:
+        cout<<"Ingrese la primera dirección a la que quiere ir: "<<endl;
+        cin >> dir[0];
+        posDir[0] = buscarV(dir[0]);
+        cout<<"Ingrese la segunda dirección a la que quiere ir: "<<endl;
+        cin >> dir[1];
+        posDir[1] = buscarV(dir[1]);
+        cout<<"Ingrese la tercera dirección a la que quiere ir: "<<endl;
+        cin >> dir[2];
+        posDir[2] = buscarV(dir[2]);
 
-        //if los 2 nodos estan la ruta
-            //se imprime la ruta
-        //ifelse (esta el 1ro?){
-            //
-        //ifelse (esta el 2do?){
-            //
-        // No hay ninguno de los 2
+        for(int i=0;i<3;i++){
+            dijkstra(pizzeria,dir[i]);
+            ruta[0] = obtenerRuta(dir[i]);
+            tiempo[0] = suma[posDir[i]];
+            //guardar ruta y tiempo
+            for (int j=0;j<3;j++){
+                if(j!=i){
+                    dijkstra(dir[i],dir[j]);
+                    ruta[1]=obtenerRuta(dir[j])+ruta[0];
+                    tiempo[1] = tiempo[0] + suma[posDir[j]];
+                    //guardar ruta y tiempo
+                    // Concatenar ruta y aumentar tiempo
+                    for (int k=0; k<3; k++){
+                        if(k!=j && k!=i){
+                            dijkstra(dir[j],dir[k]);
+                            ruta[2]=dir[k]+" <- "+obtenerRuta(dir[k])+ruta[1];
+                            tiempo[2] = tiempo[1]+suma[posDir[k]];
+                            tiempo[2] +=2;
+                            if(tiempo[2]<tiempoMenor){
+                                tiempoMenor=tiempo[2];
+                                rutaMenor = ruta[2];
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        cout<<"La mejor ruta es: "<<rutaMenor<<endl;
+        cout<<"El mejor tiempo es: "<<tiempoMenor<<endl;
+        break;
 
+    case 4: //sumar 3 al tiempo
         cout<<"Ingrese la primera dirección a la que quiere ir: "<<endl;
         cin >> dir1;
         posDir1 = buscarV(dir1);
@@ -230,11 +269,33 @@ void Grafo::combinaciones(int n){
         cout<<"Ingrese la tercera dirección a la que quiere ir: "<<endl;
         cin >> dir3;
         posDir3 = buscarV(dir3);
+        cout<<"Ingrese la cuarta dirección a la que quiere ir: "<<endl;
+        cin >> dir3;
+        posDir4 = buscarV(dir4);
+
+        //Se selecciona el primer camino más corto:
+        for(int i = 1;i<=4;i++){
+            if (i == 1) {
+                comb4 = dir1;
+            } else if (i == 2) {
+                comb4 = dir2;
+            } else if (i == 3) {
+                comb4 = dir3;
+            } else {
+                comb4 = dir4;
+            }
+            dijkstra(pizzeria,comb4);
+
+            if(tiempo1<tiempoMenor){
+                tiempoMenor=tiempo3;
+                rutaMenor = ruta3;
+            }
+
+        }
 
 
 
         for(int i=1;i<=3;i++){
-
             if (i == 1) {
                 comb1 = dir1;
             } else if (i == 2) {
@@ -247,58 +308,44 @@ void Grafo::combinaciones(int n){
             tiempo1 = suma[buscarV(comb1)];
             //guardar ruta y tiempo
             for (int j=1;j<=3;j++){
+                if(j!=i){
+                    if (j == 1) {
+                        comb2 = dir1;
+                    } else if (j == 2) {
+                        comb2 = dir2;
+                    } else {
+                        comb2 = dir3;
+                    }
+                    dijkstra(comb1,comb2);
+                    ruta2=obtenerRuta(comb2)+ruta1;
+                    tiempo2 = tiempo1 + suma[buscarV(comb2)];
+                    //guardar ruta y tiempo
+                    // Concatenar ruta y aumentar tiempo
+                    for (int k=1; k<=3; k++){
 
-                    if(j!=i){
-                        if (j == 1) {
-                            comb2 = dir1;
-                        } else if (j == 2) {
-                            comb2 = dir2;
-                        } else {
-                            comb2 = dir3;
-                        }
-                        dijkstra(comb1,comb2);
-                        ruta2=obtenerRuta(comb2)+ruta1;
-                        tiempo2 = tiempo1 + suma[buscarV(comb2)];
-                        //guardar ruta y tiempo
-                        // Concatenar ruta y aumentar tiempo
-                        for (int k=1; k<=3; k++){
-
-                            if(k!=j && k!=i){
-                                if (k == 1) {
-                                    comb3 = dir1;
-                                } else if (k == 2) {
-                                    comb3 = dir2;
-                                } else {
-                                    comb3 = dir3;
-                                }
-                                dijkstra(comb2,comb3);
-                                ruta3=comb3+" <- "+obtenerRuta(comb3)+ruta2;
-                                tiempo3 = tiempo2+suma[buscarV(comb3)];
-                                tiempo3 +=2;
-                                if(tiempo3<tiempoMenor){
-                                    tiempoMenor=tiempo3;
-                                    rutaMenor = ruta3;
-                                }
-                                //guardar ruta y tiempo
-                                // Concatenar ruta y aumentar tiempo
-                                //sumar 2 al tiempo (minutos)
-                                //Comparacion menor
+                        if(k!=j && k!=i){
+                            if (k == 1) {
+                                comb3 = dir1;
+                            } else if (k == 2) {
+                                comb3 = dir2;
+                            } else {
+                                comb3 = dir3;
+                            }
+                            dijkstra(comb2,comb3);
+                            ruta3=comb3+" <- "+obtenerRuta(comb3)+ruta2;
+                            tiempo3 = tiempo2+suma[buscarV(comb3)];
+                            tiempo3 +=2;
+                            if(tiempo3<tiempoMenor){
+                                tiempoMenor=tiempo3;
+                                rutaMenor = ruta3;
                             }
                         }
                     }
-
+                }
             }
-
-
         }
-
         cout<<"La mejor ruta es: "<<rutaMenor<<endl;
         cout<<"El mejor tiempo es: "<<tiempoMenor<<endl;
-        cout<<"No"<<endl;
-        break;
-
-    case 4: //sumar 3 al tiempo
-        cout<<"Hola"<<endl;
     break;
 
     default:
