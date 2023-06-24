@@ -24,15 +24,13 @@ int main()
     cout<<"=============== SEPARADOR ===================="<<endl;
     g.crearListaV();
     g.crearMatrizAdj();
-
-    cout << "Entregas por realizar: "<<endl;
     int entregas;
-    cin >> entregas;
-    g.combinaciones(entregas);
 
-
-    //Utilizar colores para imprimir
-
+    do{
+        cout << "Entregas por realizar (ingrese 0 para salir): "<<endl;
+        cin >> entregas;
+        g.combinaciones(entregas);
+    }while(entregas!=0);
 
     return 0;
 }

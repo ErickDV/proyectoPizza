@@ -27,7 +27,7 @@ class Grafo
         void dijkstra(string a,string b);
         void combinaciones(int n);
         void inicializarSuma();
-        void imprimirSuma();
+        string invertirYReemplazar(string cadena);
 };
 
 #endif // GRAFO_H

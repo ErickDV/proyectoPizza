@@ -114,25 +114,26 @@
 	<iostream>
 	"Vertice.h"
 
-1687566253 source:c:\users\erick\documents\universidad\cuarto semestre\2 estructura datos\proyectopizza\proyectopizza\grafos - copia\main.cpp
+1687627410 source:c:\users\erick\documents\universidad\cuarto semestre\2 estructura datos\proyectopizza\proyectopizza\grafos - copia\main.cpp
 	<iostream>
 	<fstream>
 	<string>
 	"Grafo.h"
 
-1687572904 c:\users\erick\documents\universidad\cuarto semestre\2 estructura datos\proyectopizza\proyectopizza\grafos - copia\include\grafo.h
+1687627638 c:\users\erick\documents\universidad\cuarto semestre\2 estructura datos\proyectopizza\proyectopizza\grafos - copia\include\grafo.h
 	"Vertice.h"
 	<fstream>
 
 1687374599 c:\users\erick\documents\universidad\cuarto semestre\2 estructura datos\proyectopizza\proyectopizza\grafos - copia\include\vertice.h
 	<string>
 
-1687622557 source:c:\users\erick\documents\universidad\cuarto semestre\2 estructura datos\proyectopizza\proyectopizza\grafos - copia\src\grafo.cpp
+1687627689 source:c:\users\erick\documents\universidad\cuarto semestre\2 estructura datos\proyectopizza\proyectopizza\grafos - copia\src\grafo.cpp
 	"Grafo.h"
 	<fstream>
 	<string>
 	<iostream>
 	"Vertice.h"
+	<algorithm>
 
 1687374599 source:c:\users\erick\documents\universidad\cuarto semestre\2 estructura datos\proyectopizza\proyectopizza\grafos - copia\src\vertice.cpp
 	"Vertice.h"
